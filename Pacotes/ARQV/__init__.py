@@ -49,4 +49,8 @@ def Buscador_Imagem(nome_objeto):
     
     import webbrowser
 
-    webbrowser.open(f"https://www.google.com/search?q={nome_objeto}&client=opera-gx&sxsrf=APwXEdfYK_znXlte7FpM_jCK58OQTjDDoQ:1681579839427&tbm=isch&source=iu&ictx=1&vet=1&fir=JECei1pY3Mo9WM%252CNt6neUSzeKWssM%252C%252Fm%252F06m_p%253BhJm_VJVpL1mA_M%252Cl70XL8t3TDsG3M%252C_%253BMAqgH8TGKvh_KM%252COdVpO27N-p3FvM%252C_%253B16CLx_KG5yFIwM%252C74d2IdbyMxt9TM%252C_%253BrWJAuiDwWhSWPM%252COdVpO27N-p3FvM%252C_&usg=AI4_-kTkQ3DSxyhJdzbbvUTUOizenpBlCg&sa=X&ved=2ahUKEwin-_WHtaz-AhXfR7gEHSdACfkQ_B16BAhnEAE#imgrc=JECei1pY3Mo9WM")
+    try:
+        webbrowser.open(f"https://www.google.com/search?q={nome_objeto}&client=opera-gx&sxsrf=APwXEdfYK_znXlte7FpM_jCK58OQTjDDoQ:1681579839427&tbm=isch&source=iu&ictx=1&vet=1&fir=JECei1pY3Mo9WM%252CNt6neUSzeKWssM%252C%252Fm%252F06m_p%253BhJm_VJVpL1mA_M%252Cl70XL8t3TDsG3M%252C_%253BMAqgH8TGKvh_KM%252COdVpO27N-p3FvM%252C_%253B16CLx_KG5yFIwM%252C74d2IdbyMxt9TM%252C_%253BrWJAuiDwWhSWPM%252COdVpO27N-p3FvM%252C_&usg=AI4_-kTkQ3DSxyhJdzbbvUTUOizenpBlCg&sa=X&ved=2ahUKEwin-_WHtaz-AhXfR7gEHSdACfkQ_B16BAhnEAE#imgrc=JECei1pY3Mo9WM")
+
+    except webbrowser.Error as e:
+        print(f"\033[m31Erro: Não foi possível acessar a imagem- {e}")
